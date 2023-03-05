@@ -12,9 +12,16 @@
     pulaLinha()
   }
 
-  var peso = 45.0
-  var altura = 1.6
-  var imc = peso / (altura * altura)
+  function calculaImc(peso, altura) {
+    var imc = peso / (altura * altura)
+    mostra('O IMC calculado é ' + Math.round(imc))
+  }
 
-  mostra('O IMC é ' + Math.round(imc))
+  var pesoDaiane = 48.75
+  var alturaDaiane = 1.6
+  calculaImc(pesoDaiane, alturaDaiane)
+
+  var pesoSergio = 89
+  var alturaSergio = 1.8
+  calculaImc(pesoSergio, alturaSergio)
 </script>
