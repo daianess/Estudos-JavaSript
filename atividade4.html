@@ -12,14 +12,17 @@
     pulaLinha()
   }
 
-  function calculaImc(peso1, altura1, peso2, altura2) {
-    var imc1 = peso1 / (altura1 * altura1)
-    var imc2 = peso2 / (altura2 + altura2)
-    var somaImc = imc1 + imc2
-    mostra('O IMC 1 é ' + Math.round(imc1))
-    mostra('O IMC 2 é ' + Math.round(imc2))
-    mostra('A soma dos IMCs é ' + Math.round(somaImc))
+  function calculaImc(peso, altura) {
+    var imc = peso / (altura * altura)
+    return imc
   }
 
-  calculaImc(73, 1.71, 68, 1.72)
+  var imcSergio = calculaImc(73, 1.71)
+  var imcDaiane = calculaImc(45, 1.6)
+
+  mostra('O IMC de Sérgio é ' + Math.round(imcSergio))
+  mostra('O IMC de Daiane é ' + Math.round(imcDaiane))
+  mostra(
+    'A soma do IMC de Sérgio e Daiane é de ' + Math.round(imcSergio + imcDaiane)
+  )
 </script>
